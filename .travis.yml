@@ -1,0 +1,15 @@
+language: python
+python:
+- 3.6
+install:
+- pip install -r requirements.txt
+script:
+- python -m unittest discover
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: dgXe6/YEUOtwZQWtecnitbkgLxXOGYM7ya3XMCUJreNKQ1nvI/UH0NPFMwDQeLV/gIPsmCCn7tiXZX2+YVlgSC2IewY2cvFsVDHhojZ9++ZOWkW/hSRnvVRnUpaoOoWhyKaENBIxrKYXELDezp7gDpCrjxnt2qG665DuSOUAf7wNErUW47TprQavYDol57r4hhiIfC6Nj62MhcPpD2KK9StVBz0LjIwtuSs0zVqqGHcTNtr/dd4eNzYO/U6AMgTevXUj18SuEA03W08rAhW3nfXkxo8yecOTDjmD1sjWj6kQSkebjkFLpWgok8pFcPp69ouoZ2kCsLuZ8HUhYnAbhOA+YgYv06ebjA4WfKThvS7g8LqpTL0ysJbY2e9kfZic4izH8gEOlviuLISwG3zQ3G+QJ+qbmN+lTzxUYiqRLRVESp+o+vrXQ4k5NQNqnxeR8/3ijTUV8DzIubN+1VgdHAy4pSGUGsHZjiiUJrr5oBaMQtSCsI9x5rFw4R+hX+B6IGFqzcx4ffYhfuWvdvfyU9WROp0HzDZZKlBnUO14uibjh9O9fSQk2Fc5P9K/AcLnDpqeCNOWP0d2Y/BzQvR8nBEqDRIwZ0gf/DEL67N/+OnUA37qK04tbhcM1ZKW1wpLLaangykC5RTWYKLjBriYbkd37Hpwpt0CQ0OPcFq+LgY=
+app: beemie-the-chatbette
